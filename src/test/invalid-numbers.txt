@@ -1,0 +1,2 @@
+dcnum123pop4562 -->>The document number does not starts with "docnum" or "kontract"
+docnum123pop45611 -->>Document number length does not consist of 15 characters
