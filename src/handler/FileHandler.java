@@ -38,7 +38,7 @@ public class FileHandler {
                     wValid.write(docNumber + "\n");
                 } else {
                     if (docNumber.length() != 15) {
-                        message = "-->>Document number length does not consist of 15 characters";
+                        message = " -->>Document number length does not consist of 15 characters";
                     } else {
                         message = " -->>The document number does not starts with \"docnum\" or \"kontract\"";
                     }
