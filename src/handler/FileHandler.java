@@ -34,9 +34,14 @@ public class FileHandler {
              BufferedWriter wValid = new BufferedWriter(new FileWriter(validNumbers));
              BufferedWriter wInvalid = new BufferedWriter(new FileWriter(invalidNumbers))) {
             while ((docNumber = reader.readLine()) != null) {
-                if ((message = Validator.checkNumber(docNumber)) == null) {
+                if (Validator.checkNumber(docNumber)) {
                     wValid.write(docNumber + "\n");
                 } else {
+                    if (docNumber.length() != 15) {
+                        message = "-->>Document number length does not consist of 15 characters";
+                    } else {
+                        message = " -->>The document number does not starts with \"docnum\" or \"kontract\"";
+                    }
                     wInvalid.write(docNumber + message + "\n");
                 }
             }
